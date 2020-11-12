@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Validate</title>
+	<style type="text/css">
+		.error {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<form>
+		Name <input type="text" name="name"> <br>
+		Email <input type="text" name="email"> <br><br>
+		<input type="submit" name="submit">
+	</form>
+
+	<script src="JS/jquery.js"></script>
+	<script src="JS/jquery.validate.js"></script>
+	<script>
+		$('form').validate({
+			rules: {
+				name: { required: true, minlength: 3 },
+				email: { required: true, email: true  }
+			}
+		});
+	</script>
+
+</body>
+</html>
